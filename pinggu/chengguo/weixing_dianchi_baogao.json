@@ -1,0 +1,74 @@
+{
+  "shu_ju": "$(PROJECT_ROOT)/shiyan/shuju_dianchi",
+  "lai_yuan": "NASA PCoE Prognostics Data Repository, 18650 Li-ion 2Ohm 恒流放电老化数据",
+  "dian_chi": {
+    "B0005": {
+      "xun_huan_shu": 168,
+      "soh_shou": 1.0,
+      "soh_wei": 0.714,
+      "shi_ji_70": 161,
+      "jian_cha": {
+        "40": {
+          "yu_ce": 152.1,
+          "shi_ji": 121,
+          "wu_cha": 0.257
+        },
+        "60": {
+          "yu_ce": 96.8,
+          "shi_ji": 101,
+          "wu_cha": 0.042
+        },
+        "80": {
+          "yu_ce": 42.8,
+          "shi_ji": 81,
+          "wu_cha": 0.472
+        },
+        "100": {
+          "yu_ce": 53.0,
+          "shi_ji": 61,
+          "wu_cha": 0.132
+        },
+        "120": {
+          "yu_ce": 36.3,
+          "shi_ji": 41,
+          "wu_cha": 0.115
+        }
+      },
+      "jun_xiang_dui_wu_cha": 0.203
+    },
+    "B0006": {
+      "xun_huan_shu": 168,
+      "soh_shou": 1.0,
+      "soh_wei": 0.583,
+      "shi_ji_70": 101,
+      "jian_cha": {
+        "40": {
+          "yu_ce": 34.4,
+          "shi_ji": 61,
+          "wu_cha": 0.435
+        },
+        "60": {
+          "yu_ce": 25.9,
+          "shi_ji": 41,
+          "wu_cha": 0.369
+        },
+        "80": {
+          "yu_ce": 8.5,
+          "shi_ji": 21,
+          "wu_cha": 0.595
+        },
+        "100": {
+          "yu_ce": 1.0,
+          "shi_ji": 1,
+          "wu_cha": 0.05
+        },
+        "120": {
+          "yu_ce": 0.0,
+          "shi_ji": 0,
+          "wu_cha": 0.0
+        }
+      },
+      "jun_xiang_dui_wu_cha": 0.29
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "zhang": 2000,
+  "tong_yong": {
+    "duan_jian_chu": 4,
+    "duan_zong": 5,
+    "guo_du_wu_bao": 20,
+    "qi_ta_wu_bao": 4,
+    "zhao": {
+      "MUXIAN_DIELUO": false,
+      "CHONGDIAN_SHIXIAO": true,
+      "GUOWEN": true,
+      "DIANCHI_NEIZU": true,
+      "GUANGFU_SHUAIJIAN": true
+    }
+  },
+  "ling_yu": {
+    "duan_jian_chu": 5,
+    "duan_zong": 5,
+    "guo_du_wu_bao": 0,
+    "qi_ta_wu_bao": 3,
+    "zhao": {
+      "MUXIAN_DIELUO": true,
+      "CHONGDIAN_SHIXIAO": true,
+      "GUOWEN": true,
+      "DIANCHI_NEIZU": true,
+      "GUANGFU_SHUAIJIAN": true
+    }
+  },
+  "soh": 81.2,
+  "rul": 7.0,
+  "seu": true
+}

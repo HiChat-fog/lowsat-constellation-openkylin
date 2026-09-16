@@ -1,0 +1,40 @@
+{
+  "mingcheng": "dianyuan-shuju",
+  "banben": "1.0",
+  "shuoming": "电源系统健康管理领域层的数据契约:六通道输入、领域事件行、周期报告行",
+  "tong_dao": [
+    {"xu": 0, "ming": "u_bus", "dan_wei": "V", "shuoming": "母线电压"},
+    {"xu": 1, "ming": "u_bat", "dan_wei": "V", "shuoming": "蓄电池端电压"},
+    {"xu": 2, "ming": "i_bat", "dan_wei": "A", "shuoming": "电池电流,正充电负放电"},
+    {"xu": 3, "ming": "i_load", "dan_wei": "A", "shuoming": "负载电流"},
+    {"xu": 4, "ming": "p_pv", "dan_wei": "W", "shuoming": "光伏阵列功率,日食期为0属正常"},
+    {"xu": 5, "ming": "w_pcu", "dan_wei": "C", "shuoming": "功率控制单元温度"}
+  ],
+  "shi_jian_geshi": "dongzuo|jiedian|t=zheng_shu|leixing=DIANYU|dao=tong_dao_ming|label=biao_qian|zhi=fu_dian",
+  "biao_qian": [
+    {"ming": "MUXIAN_DIELUO", "shuoming": "母线电压跌落"},
+    {"ming": "DIANCHI_NEIZU", "shuoming": "蓄电池内阻异常增大(健康度下降)"},
+    {"ming": "GUANGFU_SHUAIJIAN", "shuoming": "光伏阵列输出退化(按圈峰值对比)"},
+    {"ming": "CHONGDIAN_YICHANG", "shuoming": "充电回路电流异常"},
+    {"ming": "CHONGDIAN_SHIXIAO", "shuoming": "光照期充电失效(有功率无充电电流)"},
+    {"ming": "GUOWEN", "shuoming": "功率控制单元过温"},
+    {"ming": "GUODIAN", "shuoming": "蓄电池过放(SOC低于下限)"},
+    {"ming": "SEU", "shuoming": "单粒子翻转样式瞬扰(单拍极值后恢复,不锁存)"}
+  ],
+  "bao_gao_zi_duan": [
+    {"ming": "soc", "shuoming": "荷电状态估计,外置数据模式下由库仑计数得出"},
+    {"ming": "u_bus", "shuoming": "母线电压原始值"},
+    {"ming": "i_bat", "shuoming": "电池电流原始值"},
+    {"ming": "r_mo", "shuoming": "内阻估计,毫欧"},
+    {"ming": "soh", "shuoming": "电池健康评分,0到100,由内阻相对健康基线的增长得出"},
+    {"ming": "xunhuan", "shuoming": "充放电循环计数(出影即一圈)"},
+    {"ming": "dod", "shuoming": "本圈放电深度"},
+    {"ming": "rul", "shuoming": "剩余可用循环预测,按内阻增长斜率外推,负值表示无法估计"}
+  ],
+  "yun_xing_mo_shi": [
+    {"ming": "--zice", "shuoming": "自检:仿真四圈,注入六类故障,断言全部检出且瞬态无报"},
+    {"ming": "--moxing", "shuoming": "输出仿真通道CSV,故障与瞬态真值标注写标准错误"},
+    {"ming": "--shuru", "shuoming": "从标准输入读六通道CSV做领域分析,末行ZUIZHOU汇总"},
+    {"ming": "jiedian", "shuoming": "常驻演示模式,内嵌仿真"}
+  ]
+}

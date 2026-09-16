@@ -1,0 +1,15 @@
+[Unit]
+Description=weixing shebei zhuangtai jiance
+After=network.target
+Wants=network.target
+
+[Service]
+Type=simple
+ExecStart=/opt/weixing/jiance weixing1
+Restart=always
+RestartSec=5
+StandardOutput=append:/var/log/weixing/jiance.log
+StandardError=append:/var/log/weixing/jiance.log
+
+[Install]
+WantedBy=multi-user.target

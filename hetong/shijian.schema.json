@@ -1,0 +1,12 @@
+{
+  "mingcheng": "shijian-liu",
+  "banben": "1.0",
+  "shuoming": "agent/节点运行事件(告警、恢复、系统事件)写入 stderr,一行一条,竖线分隔",
+  "geshi": "LEIXING|jiedian|neirong",
+  "leixing": [
+    {"ming": "ALARM", "shuoming": "告警", "li": "ALARM|weixing1|应用任务|syscall 激增 150%(上一周期 100 次)"},
+    {"ming": "RECOVER", "shuoming": "恢复", "li": "RECOVER|weixing1|wendu|回归正常 z=1.2"},
+    {"ming": "XITONG", "shuoming": "系统事件(启动/退出/异常)", "li": "XITONG|weixing1|qidong wanbi"},
+    {"ming": "ZIJIAN", "shuoming": "自监控事件", "li": "ZIJIAN|weixing1|ziji neicun 12MB cpu 0.5%"}
+  ]
+}

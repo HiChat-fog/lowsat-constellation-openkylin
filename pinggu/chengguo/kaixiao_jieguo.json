@@ -1,0 +1,22 @@
+{
+  "xing": 1,
+  "canliang": 2000000,
+  "lunshu": 2,
+  "agent_kai": {
+    "n": 2,
+    "mean": 12668.5,
+    "std": 9.2,
+    "min": 12662,
+    "max": 12675
+  },
+  "agent_guan": {
+    "n": 2,
+    "mean": 12519,
+    "std": 31.1,
+    "min": 12497,
+    "max": 12541
+  },
+  "kai_bi_guan_man": 1.19,
+  "agent_rss_kb": null,
+  "yong_shi_s": 63.5
+}

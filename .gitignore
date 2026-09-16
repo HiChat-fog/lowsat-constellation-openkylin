@@ -1,0 +1,9 @@
+chengwu/
+agent/agent.bpf.o
+agent/agent.skel.h
+xingxin/xingxin
+__pycache__/
+.pytest_cache/
+*.pyc
+pinggu/.shendu_venv/
+

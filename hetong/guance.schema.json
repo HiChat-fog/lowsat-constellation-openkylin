@@ -1,0 +1,29 @@
+{
+  "mingcheng": "guance-shuju",
+  "banben": "1.1",
+  "shuoming": "agent 每个采样周期向 stdout 输出一行的数据对象,字段严格如下",
+  "zi_duan": [
+    {"ming": "shijian", "leixing": "string", "geshi": "HH:MM:SS", "shuoming": "本周期时间"},
+    {"ming": "lunci", "leixing": "integer", "shuoming": "周期序号,从1递增"},
+    {"ming": "jiedian", "leixing": "string", "shuoming": "节点名,如 weixing1"},
+    {"ming": "cpu", "leixing": "number", "fanwei": "0-100", "shuoming": "本周期 CPU 占用百分比"},
+    {"ming": "neicun", "leixing": "integer", "fanwei": "0-100", "shuoming": "内存占用百分比(近似)"},
+    {"ming": "qiehuan", "leixing": "integer", "shuoming": "本周期以来累计调度切换次数"},
+    {"ming": "qiehuan_zeng", "leixing": "integer", "shuoming": "本周期新增调度切换次数(周期增量)"},
+    {"ming": "zhixing", "leixing": "integer", "shuoming": "进程 exec 事件累计数"},
+    {"ming": "fanzhi", "leixing": "integer", "shuoming": "进程 fork 事件累计数"},
+    {"ming": "zong_sys", "leixing": "integer", "shuoming": "系统调用累计总数"},
+    {"ming": "sys_zeng", "leixing": "integer", "shuoming": "本周期新增系统调用数(周期增量)"},
+    {"ming": "sys_top", "leixing": "array", "yuan_su": {"id": "integer", "ming": "string", "ci": "integer"}, "shuoming": "调用次数 top5,syscall 名见 mingling_tab"},
+    {"ming": "suanli_top", "leixing": "array", "yuan_su": {"pid": "integer", "ming": "string", "haoshi_ms": "number"}, "shuoming": "CPU 耗时 top3 进程"},
+    {"ming": "qiehuan_top", "leixing": "array", "yuan_su": {"ming": "string", "ci": "integer"}, "shuoming": "切换次数 top3 进程"}
+  ],
+  "li": {
+    "shijian": "10:32:48", "lunci": 7, "jiedian": "weixing1",
+    "cpu": 2.5, "neicun": 9, "qiehuan": 11808, "qiehuan_zeng": 2004, "zhixing": 6,
+    "fanzhi": 9, "zong_sys": 19065, "sys_zeng": 2723,
+    "sys_top": [{"id": 280, "ming": "bpf", "ci": 4968}],
+    "suanli_top": [{"pid": 385, "ming": "xingxin_riscv64", "haoshi_ms": 470}],
+    "qiehuan_top": [{"ming": "xingxin_riscv64", "ci": 6148}]
+  }
+}

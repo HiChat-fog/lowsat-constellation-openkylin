@@ -1,0 +1,175 @@
+{
+  "shi_jian": "2026-09-16 09:19:36",
+  "mo_kuai": {
+    "hui_gui_ce_shi": {
+      "pytest": "通过 49",
+      "tui_chu_ma": 0
+    },
+    "he_cheng_dui_bi": {
+      "you_hua": {
+        "jian_chu_lv": 100.0,
+        "wu_bao": 0
+      },
+      "ji_xian": {
+        "jian_chu_lv": 50.0,
+        "wu_bao": 21
+      }
+    },
+    "smap_msl": {
+      "can_zhao": {
+        "lai_yuan": "Hundman et al., Detecting Spacecraft Anomalies Using LSTMs and Nonparametric Dynamic Thresholding, KDD 2018 (NASA JPL Telemanom)",
+        "fang_fa": "LSTM 预测 + 非参数动态阈值(离线, GPU)",
+        "hui_zong": {
+          "SMAP": 0.94,
+          "MSL": 0.91
+        },
+        "shuo_ming": "论文汇总口径的 F1, 用作参照系; 本评估为轻量在线方法在单通道子集上的结果, 二者量纲不同不可直接排名"
+      },
+      "优化(自适应四机制)": {
+        "f1": 0.433,
+        "zhao_hui": 0.988,
+        "vus_pr": 0.134
+      },
+      "基线1(滑窗z分数)": {
+        "f1": 0.395,
+        "zhao_hui": 0.506,
+        "vus_pr": 0.136
+      },
+      "基线2(全局3西格玛)": {
+        "f1": 0.414,
+        "zhao_hui": 0.506,
+        "vus_pr": 0.137
+      }
+    },
+    "dian_yuan_ling_yu": {
+      "ling_yu": {
+        "duan_jian_chu": 5,
+        "duan_zong": 5,
+        "guo_du_wu_bao": 0,
+        "qi_ta_wu_bao": 3,
+        "zhao": {
+          "MUXIAN_DIELUO": true,
+          "CHONGDIAN_SHIXIAO": true,
+          "GUOWEN": true,
+          "DIANCHI_NEIZU": true,
+          "GUANGFU_SHUAIJIAN": true
+        }
+      },
+      "tong_yong": {
+        "duan_jian_chu": 4,
+        "duan_zong": 5,
+        "guo_du_wu_bao": 20,
+        "qi_ta_wu_bao": 4,
+        "zhao": {
+          "MUXIAN_DIELUO": false,
+          "CHONGDIAN_SHIXIAO": true,
+          "GUOWEN": true,
+          "DIANCHI_NEIZU": true,
+          "GUANGFU_SHUAIJIAN": true
+        }
+      },
+      "soh": 81.2,
+      "rul": 7.0
+    },
+    "diao_du_li_lun_yan_zheng": {
+      "lv_bo_kc_p": 0.8004,
+      "fu_wu_kc_p": 0.2754,
+      "little_pian_cha": 3.45,
+      "fcfs_deng": 5.076,
+      "sjf_deng": 3.167,
+      "sjf_jiang": 37.6
+    },
+    "dian_chi_zhen_shi_shu_ju": {
+      "shu_ju": "$(PROJECT_ROOT)/shiyan/shuju_dianchi",
+      "lai_yuan": "NASA PCoE Prognostics Data Repository, 18650 Li-ion 2Ohm 恒流放电老化数据",
+      "dian_chi": {
+        "B0005": {
+          "xun_huan_shu": 168,
+          "soh_shou": 1.0,
+          "soh_wei": 0.714,
+          "shi_ji_70": 161,
+          "jian_cha": {
+            "40": {
+              "yu_ce": 152.1,
+              "shi_ji": 121,
+              "wu_cha": 0.257
+            },
+            "60": {
+              "yu_ce": 96.8,
+              "shi_ji": 101,
+              "wu_cha": 0.042
+            },
+            "80": {
+              "yu_ce": 42.8,
+              "shi_ji": 81,
+              "wu_cha": 0.472
+            },
+            "100": {
+              "yu_ce": 53.0,
+              "shi_ji": 61,
+              "wu_cha": 0.132
+            },
+            "120": {
+              "yu_ce": 36.3,
+              "shi_ji": 41,
+              "wu_cha": 0.115
+            }
+          },
+          "jun_xiang_dui_wu_cha": 0.203
+        },
+        "B0006": {
+          "xun_huan_shu": 168,
+          "soh_shou": 1.0,
+          "soh_wei": 0.583,
+          "shi_ji_70": 101,
+          "jian_cha": {
+            "40": {
+              "yu_ce": 34.4,
+              "shi_ji": 61,
+              "wu_cha": 0.435
+            },
+            "60": {
+              "yu_ce": 25.9,
+              "shi_ji": 41,
+              "wu_cha": 0.369
+            },
+            "80": {
+              "yu_ce": 8.5,
+              "shi_ji": 21,
+              "wu_cha": 0.595
+            },
+            "100": {
+              "yu_ce": 1.0,
+              "shi_ji": 1,
+              "wu_cha": 0.05
+            },
+            "120": {
+              "yu_ce": 0.0,
+              "shi_ji": 0,
+              "wu_cha": 0.0
+            }
+          },
+          "jun_xiang_dui_wu_cha": 0.29
+        }
+      }
+    },
+    "bpf_jiao_cha_dui_zhang": {
+      "agent": {
+        "sys": 12382739,
+        "qiehuan": 644851
+      },
+      "bpftrace": {
+        "sys": 15271454,
+        "qiehuan": 567557
+      }
+    },
+    "san_xing_zhen_ji_yan_shi": {
+      "duan_yan": "7/7",
+      "zui_hao_hui_fu_ms": 3592,
+      "hui_fu_hao_miao": [
+        3592,
+        19592
+      ]
+    }
+  }
+}

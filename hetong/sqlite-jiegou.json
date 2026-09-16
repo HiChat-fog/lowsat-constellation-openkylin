@@ -1,0 +1,32 @@
+{
+  "mingcheng": "shujuku-jiegou",
+  "banben": "1.0",
+  "shuoming": "agent 落库的 SQLite 表结构。两个表:guance(周期指标)、shijian_biao(事件流)",
+  "biao": [
+    {
+      "ming": "guance",
+      "yongtu": "每周期一条观测记录",
+      "zi_duan": [
+        {"ming": "id", "leixing": "INTEGER PRIMARY KEY AUTOINCREMENT"},
+        {"ming": "jiedian", "leixing": "TEXT"},
+        {"ming": "cpu", "leixing": "REAL"},
+        {"ming": "neicun", "leixing": "INTEGER"},
+        {"ming": "qiehuan", "leixing": "INTEGER"},
+        {"ming": "zong_sys", "leixing": "INTEGER"},
+        {"ming": "duc", "leixing": "TEXT", "shuoming": "本周期完整 JSON(契约 guance.schema.json)"},
+        {"ming": "shijian", "leixing": "DEFAULT datetime('now','localtime')"}
+      ]
+    },
+    {
+      "ming": "shijian_biao",
+      "yongtu": "事件流(告警/恢复/系统/自监控),供云端审计与告警",
+      "zi_duan": [
+        {"ming": "id", "leixing": "INTEGER PRIMARY KEY AUTOINCREMENT"},
+        {"ming": "jiedian", "leixing": "TEXT"},
+        {"ming": "leixing", "leixing": "TEXT", "shuoming": "ALARM/RECOVER/XITONG/ZIJIAN"},
+        {"ming": "neirong", "leixing": "TEXT"},
+        {"ming": "shijian", "leixing": "DEFAULT datetime('now','localtime')"}
+      ]
+    }
+  ]
+}

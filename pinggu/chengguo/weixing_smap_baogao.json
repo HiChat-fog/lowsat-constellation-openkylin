@@ -1,0 +1,173 @@
+{
+  "shu_ju": "../shiyan/shuju_smap",
+  "tong_dao": [
+    "T-1",
+    "P-1",
+    "C-1",
+    "E-1"
+  ],
+  "fang_fa": {
+    "优化(自适应四机制)": {
+      "zong_f1": 0.433,
+      "zong_jing_que": 0.277,
+      "zong_zhao_hui": 0.988,
+      "wu_bao_dian": 8003,
+      "tsb_ad_vus_pr": 0.134,
+      "vus_ge_chan": [
+        0.186,
+        0.114,
+        0.166,
+        0.069
+      ],
+      "tong_dao": {
+        "T-1": {
+          "tp": 1500,
+          "fp": 865,
+          "fn": 36,
+          "jing_que": 0.634,
+          "zhao_hui": 0.977,
+          "f1": 0.769,
+          "duan_zhao": 1
+        },
+        "P-1": {
+          "tp": 751,
+          "fp": 2151,
+          "fn": 0,
+          "jing_que": 0.259,
+          "zhao_hui": 1.0,
+          "f1": 0.411,
+          "duan_zhao": 3
+        },
+        "C-1": {
+          "tp": 312,
+          "fp": 644,
+          "fn": 0,
+          "jing_que": 0.326,
+          "zhao_hui": 1.0,
+          "f1": 0.492,
+          "duan_zhao": 2
+        },
+        "E-1": {
+          "tp": 508,
+          "fp": 4343,
+          "fn": 0,
+          "jing_que": 0.105,
+          "zhao_hui": 1.0,
+          "f1": 0.19,
+          "duan_zhao": 2
+        }
+      }
+    },
+    "基线1(滑窗z分数)": {
+      "zong_f1": 0.395,
+      "zong_jing_que": 0.324,
+      "zong_zhao_hui": 0.506,
+      "wu_bao_dian": 3273,
+      "tsb_ad_vus_pr": 0.136,
+      "vus_ge_chan": [
+        0.188,
+        0.104,
+        0.185,
+        0.066
+      ],
+      "tong_dao": {
+        "T-1": {
+          "tp": 0,
+          "fp": 73,
+          "fn": 1536,
+          "jing_que": 0.0,
+          "zhao_hui": 0.0,
+          "f1": 0.0,
+          "duan_zhao": 0
+        },
+        "P-1": {
+          "tp": 751,
+          "fp": 1381,
+          "fn": 0,
+          "jing_que": 0.352,
+          "zhao_hui": 1.0,
+          "f1": 0.521,
+          "duan_zhao": 3
+        },
+        "C-1": {
+          "tp": 312,
+          "fp": 481,
+          "fn": 0,
+          "jing_que": 0.393,
+          "zhao_hui": 1.0,
+          "f1": 0.565,
+          "duan_zhao": 2
+        },
+        "E-1": {
+          "tp": 508,
+          "fp": 1338,
+          "fn": 0,
+          "jing_que": 0.275,
+          "zhao_hui": 1.0,
+          "f1": 0.432,
+          "duan_zhao": 2
+        }
+      }
+    },
+    "基线2(全局3西格玛)": {
+      "zong_f1": 0.414,
+      "zong_jing_que": 0.351,
+      "zong_zhao_hui": 0.506,
+      "wu_bao_dian": 2911,
+      "tsb_ad_vus_pr": 0.137,
+      "vus_ge_chan": [
+        0.188,
+        0.102,
+        0.192,
+        0.067
+      ],
+      "tong_dao": {
+        "T-1": {
+          "tp": 0,
+          "fp": 38,
+          "fn": 1536,
+          "jing_que": 0.0,
+          "zhao_hui": 0.0,
+          "f1": 0.0,
+          "duan_zhao": 0
+        },
+        "P-1": {
+          "tp": 751,
+          "fp": 705,
+          "fn": 0,
+          "jing_que": 0.516,
+          "zhao_hui": 1.0,
+          "f1": 0.681,
+          "duan_zhao": 3
+        },
+        "C-1": {
+          "tp": 312,
+          "fp": 1253,
+          "fn": 0,
+          "jing_que": 0.199,
+          "zhao_hui": 1.0,
+          "f1": 0.332,
+          "duan_zhao": 2
+        },
+        "E-1": {
+          "tp": 508,
+          "fp": 915,
+          "fn": 0,
+          "jing_que": 0.357,
+          "zhao_hui": 1.0,
+          "f1": 0.526,
+          "duan_zhao": 2
+        }
+      }
+    }
+  },
+  "can_zhao": {
+    "lai_yuan": "Hundman et al., Detecting Spacecraft Anomalies Using LSTMs and Nonparametric Dynamic Thresholding, KDD 2018 (NASA JPL Telemanom)",
+    "fang_fa": "LSTM 预测 + 非参数动态阈值(离线, GPU)",
+    "hui_zong": {
+      "SMAP": 0.94,
+      "MSL": 0.91
+    },
+    "shuo_ming": "论文汇总口径的 F1, 用作参照系; 本评估为轻量在线方法在单通道子集上的结果, 二者量纲不同不可直接排名"
+  }
+}

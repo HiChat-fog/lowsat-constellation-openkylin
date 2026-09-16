@@ -1,0 +1,59 @@
+{
+  "zhong_zi": 20260912,
+  "ji_xian": {
+    "jian_chu_lv": 50.0,
+    "wu_bao": 21,
+    "guo_zao_hui_fu": 2,
+    "ping_jun_yan_chi": 0.5,
+    "ge_lei": {
+      "0_TB": {
+        "jian_chu": true,
+        "yan_chi": 0,
+        "lei_zheng": null
+      },
+      "1_PIAO_YI": {
+        "jian_chu": true,
+        "yan_chi": 1,
+        "lei_zheng": null
+      },
+      "2_FANG_CHA": {
+        "jian_chu": false,
+        "yan_chi": null,
+        "lei_zheng": null
+      },
+      "3_KA_SI": {
+        "jian_chu": false,
+        "yan_chi": null,
+        "lei_zheng": null
+      }
+    }
+  },
+  "you_hua": {
+    "jian_chu_lv": 100.0,
+    "wu_bao": 0,
+    "guo_zao_hui_fu": 0,
+    "ping_jun_yan_chi": 5.8,
+    "ge_lei": {
+      "0_TB": {
+        "jian_chu": true,
+        "yan_chi": 1,
+        "lei_zheng": true
+      },
+      "1_PIAO_YI": {
+        "jian_chu": true,
+        "yan_chi": 4,
+        "lei_zheng": true
+      },
+      "2_FANG_CHA": {
+        "jian_chu": true,
+        "yan_chi": 2,
+        "lei_zheng": true
+      },
+      "3_KA_SI": {
+        "jian_chu": true,
+        "yan_chi": 16,
+        "lei_zheng": true
+      }
+    }
+  }
+}

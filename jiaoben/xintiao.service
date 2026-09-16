@@ -1,0 +1,19 @@
+[Unit]
+Description=weixing xintiao (memberlist zizhi yuzhi)
+After=network.target
+Wants=network.target
+
+[Service]
+Type=simple
+Environment=IP=192.168.50.1
+Environment=LA=192.168.50.1:7946
+ExecStart=/opt/weixing/xingxin_riscv64 weixing1 7946 ${IP} ${LA}
+Nice=5
+CPUQuota=70%
+Restart=always
+RestartSec=3
+StandardOutput=append:/var/log/weixing/xintiao.log
+StandardError=append:/var/log/weixing/xintiao.log
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,28 @@
+name: ceshi
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  dan_yuan_ce_shi:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-go@v5
+        with:
+          go-version: '1.26'
+      - name: C dan yuan ce shi
+        run: make ceshi-c
+      - name: Python ce shi
+        run: |
+          python3 -m pip install --upgrade pip pytest
+          make ceshi-py
+      - name: Go ce shi(race + vet + staticcheck)
+        run: make ceshi-go
+      - name: Jing tai jian cha
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq shellcheck cppcheck
+          make ceshi-jing

@@ -1,0 +1,15 @@
+[Unit]
+Description=weixing guance agent (eBPF wulei caiji)
+After=network.target
+Wants=network.target
+
+[Service]
+Type=simple
+ExecStart=/opt/weixing/agent_yonghu weixing1 5
+Restart=always
+RestartSec=3
+StandardOutput=append:/var/log/weixing/agent.log
+StandardError=append:/var/log/weixing/agent.log
+
+[Install]
+WantedBy=multi-user.target

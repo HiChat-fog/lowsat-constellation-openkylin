@@ -1,0 +1,82 @@
+name: Checks
+
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+
+# This workflow runs for not-yet-reviewed external contributions and so it
+# intentionally has no write access and only limited read access to the
+# repository.
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    name: "Run linting"
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        GO_VERSION:
+          - 'oldstable'
+          - 'stable'
+    steps:
+      - name: "checkout source"
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v4.0.0
+      - name: "setup toolchain"
+        uses: actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e # v7.0.0
+        with:
+          cache: true
+          go-version: ${{ matrix.GO_VERSION }}
+      - name: "lint"
+        uses: golangci/golangci-lint-action@ba0d7d2ec06a0ea1cb5fa41b2e4a3ab91d21278a # v9.3.0
+
+      - name: "go.mod and go.sum consistency check"
+        run: make tidy
+
+  unit-tests:
+    name: "Unit Tests"
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        GO_VERSION:
+          - 'oldstable'
+          - 'stable'
+    steps:
+      - name: "checkout source"
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v4.0.0
+      - name: "setup toolchain"
+        uses: actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e # v7.0.0
+        with:
+          go-version: ${{ matrix.GO_VERSION }}
+          cache: true
+
+      - name: "Unit tests and coverage report"
+        run: make cov
+
+      - name: Upload coverage report
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          path: coverage.out
+          name: Coverage-report-${{matrix.GO_VERSION}}
+
+  unit-tests-race:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        GO_VERSION:
+          - 'oldstable'
+          - 'stable'
+    steps:
+      - name: "checkout source"
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v4.0.0
+      - name: "setup toolchain"
+        uses: actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e # v7.0.0
+        with:
+          go-version: ${{ matrix.GO_VERSION }}
+          cache: true
+
+      - name: "Unit tests with race detection"
+        run: |
+          go test -race ./...
