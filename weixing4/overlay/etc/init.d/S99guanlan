@@ -1,0 +1,19 @@
+#!/bin/sh
+# guanlan nommu node: mount the constellation data share via 9p and start
+# contract telemetry. The host side reads /mnt/share/shuju/*.json unchanged.
+START=99
+case "$1" in
+  start)
+    grep -q " /mnt/share " /proc/mounts || \
+      mount -t 9p -o trans=virtio hostshare /mnt/share
+    guanlan_agent weixing4 3 /mnt/share/shuju/weixing4.json >/dev/null 2>&1 &
+    echo "guanlan node online (weixing4)"
+    ;;
+  stop)
+    killall guanlan_agent 2>/dev/null
+    ;;
+  *)
+    echo "usage: $0 {start|stop}"
+    exit 1
+    ;;
+esac

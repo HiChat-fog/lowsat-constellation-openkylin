@@ -1,0 +1,14 @@
+# weixing4 (nommu node) kernel config additions, on top of
+# nommu_virt_defconfig + 32-bit.config:
+CONFIG_NET=y
+CONFIG_INET=y
+CONFIG_NET_9P=y
+CONFIG_NET_9P_VIRTIO=y
+CONFIG_9P_FS=y
+# and on top of the openKylin nile tree, these must be off (broken Kconfig
+# hygiene of bundled vendor drivers when subsystems are absent):
+# CONFIG_PM_DEVFREQ / DEVFREQ_THERMAL / ENABLE_DEVFREQ / MALI_* / ARMCHINA_NPU / CIX_*
+# plus drivers/net/phy/Makefile: guard the unconditional "obj-y += linkyum.o"
+# (see patches/0001)
+# also: CONFIG_CMDLINE_FORCE=n (it replaces the whole external cmdline)
+# and: INITRAMFS_SOURCE empty (a builtin initramfs hijacks root and blocks root=/dev/vda)
